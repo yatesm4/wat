@@ -136,13 +136,22 @@ nav a:hover {
 }
 
 .main aside {
-    color: white;
-    padding: 0px 5% 10px;
+    padding: 0px 30px 10px;
 }
 
 .footer-container footer {
     color: white;
     padding: 20px 0;
+}
+
+.main #map {
+    position: relative;
+    float: left;
+}
+
+.main aside {
+    position: absolute;
+    float: right;
 }
 
 /* ===============
@@ -157,7 +166,25 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.sidebar-container .settings {
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
 
+.sidebar-container .settings p {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#locInput, #searchBar, #btnSearch{
+    border-radius: 20px;
+    box-shadow: 2px 2px black;
+}
+
+#btnSearch {
+    bottom: 0;
+    height: 18px;
+}
 
 
 
@@ -218,9 +245,9 @@ nav a:hover {
 
     .header-container,
     .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
+        -webkit-box-shadow: 10px 10px;
+           -moz-box-shadow: 10px 10px;
+                box-shadow: 10px 10px;
     }
 
 /* ============
@@ -243,13 +270,11 @@ nav a:hover {
     .main #map {
         position: relative;
         float: left;
-        width: 140%;
     }
 
     .main aside {
         position: absolute;
         float: right;
-        width: 10%;
     }
 }
 
