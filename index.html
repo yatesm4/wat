@@ -18,11 +18,12 @@
 
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/main.js"></script>
         <script src="jquery-3.1.1.min.js"></script>
 
         <style>
             #map {
-                height: 778px;
+                height: 785px;
                 width: 100%;
             }
         </style>
@@ -47,40 +48,62 @@
 
         <div class="main-container">
 
-            <div class="sidebar container" style="float:left;width:250px;height:780px;background-color:rgb(74,74,74);">
-                <p>This is a sidebar</p>
+            <div class="sidebar-container" style="color:black;float:left;width:250px;height:785px;background-color:rgb(74,74,74);">
+                <div id="sidebarForm" class="settings"  style="outline: solid black 5px;border-top: solid rgb(236,101,103) 20px;display:none;">
+                    <form id="sideSettings">
+                        <p>Enter a location to search:</p>
+                        <input type="text" id="searchBar"><input type="button" id="btnSearch" onclick="codeAddress('searchBar')">
+                    </form>
+                </div>
             </div>
 
-            <div class="main wrapper clearfix" style="border-left: solid black 5px;margin-left:250px;">
+            <div class="main wrapper clearfix" style="border-left: solid black 5px;margin-left:250px;width:auto;right:0;margin-right:0;">
 
                 <div id="map"></div>
 
-                <aside>
+                <aside id="welcomeOverlay" style="left:75px;top:75px;border-radius: 20px;">
                     <div id="asideText" style="position:relative;float:left;">
-                        <h3>Welcome to watsUp;</h3>
-                        <p>where you have the power to reconnect.</p>
+                        <h3 style="color:white;">Welcome to watsUp;</h3>
+                        <p style="color:white;">Enter a location to begin:</p>
+                        <form id="locationSubmit">
+                            <input type="text" id="locInput"><input type="button" id="btnSearch" onclick="overlayChange('locInput')">
+                        </form>
                     </div>
                 </aside>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
-        <div class="footer-container">
+        <div class="footer-container" style="bottom:0;margin-bottom:0;height:auto;">
             <footer class="wrapper">
                 <h3>Taysty Dev</h3>
             </footer>
         </div>
 
         <script>
+            var geocoder;
+            var map;
             function initMap() {
+                geocoder = new google.maps.Geocoder();
                 var uluru = {lat: -25.363, lng: 131.044};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 2,
                     center: uluru
                 });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
+            }
+            function codeAddress(input) {
+                var address = document.getElementById(input).value;
+                geocoder.geocode( { 'address': address}, function(results, status) {
+                    if (status == 'OK') {
+                        map.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location
+                        });
+                        map.setZoom(18);
+                    } else {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    }
                 });
             }
         </script>
