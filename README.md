@@ -1,4 +1,4 @@
-# wat
-don't fuckin' worry about it
+# matthew yates
+online portfolio
 
-this is merely a placeholder for concepts
+look at me and all my interesting stuffs
