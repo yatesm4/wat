@@ -1,0 +1,30 @@
+* {box-sizing: border-box}
+
+.skill-container {
+    width: 100%;
+    background-color: #ddd;
+    border: solid white 2px;
+    margin-bottom: 10px;
+}
+
+.skill-box {
+    padding-top: 50px;
+}
+
+.skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    color: white;
+    white-space: nowrap;
+}
+
+.php {width: 70%; background-color: #4cae4c;}
+.htmlcss {width: 85%; background-color: #128f76;}
+.js {width: 55%; background-color: #ac2925;}
+.sql {width: 50%; background-color: coral;}
+.ux {width: 80%; background-color: #2b542c;}
+.pmss {width: 70%; background-color: #269abc;}
+.writing {width: 90%; background-color: #843534;}
+.learning {width: 100%; background-color: blueviolet;}
+
