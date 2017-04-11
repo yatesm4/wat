@@ -17,6 +17,9 @@
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 
+    <!-- CUSTOM CSS -->
+    <link href="css/custom-template.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -28,6 +31,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Necessary includes for skill bar -->
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </head>
 
@@ -71,11 +81,11 @@
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
+                    <img class="img-responsive wow slideInRight" src="img/profile.png" alt="">
+                    <div class="intro-text wow slideInLeft">
                         <h1 class="name">Matthew Yates</h1>
                         <br><br>
-                        <span class="skills">Full Stack Web Developer - Aspiring Programmer - Green Lantern Enthusiast</span>
+                        <span class="skills">Full Stack Web Developer - Aspiring Programmer</span>
                     </div>
                 </div>
             </div>
@@ -86,22 +96,60 @@
     <section class="success" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center wow slideInLeft">
                     <h2>About me</h2>
                     <br><br>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="col-lg-4 col-lg-offset-2 wow slideInLeft">
                     <p>Welcome, and thanks for visiting my online portfolio. My career in Web Development started in late 2015, when I was just making simple sites for fun as I learned the ins and outs. Now, I have been an intern at THiNC Technologies Inc for 6 months as a Junior Web Developer, and my experience has been wonderful.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 wow slideInLeft">
                     <p>My strategy has always been to 'sink or swim' by jumping into something new, with no experience, and teaching myself the means to achieve something great. Whether it be PHP or Javascript, or even delving into C++ and Java. Being a fast learning, cross-functional programmer has always been my greatest strength.</p>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-8 col-lg-offset-2 text-center wow slideInLeft">
                     <a href="dev_resume.docx" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Resume
                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="container skill-box">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2 wow slideInLeft">
+                    <div class="skill-container">
+                        <div class="skills php wow slideInLeft" id="php">PHP&ensp;&ensp;&ensp;70%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills htmlcss wow slideInLeft">HTML/CSS&ensp;&ensp;&ensp;85%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills js wow slideInLeft">JavaScript&ensp;&ensp;&ensp;55%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills sql wow slideInLeft">mySQL&ensp;&ensp;&ensp;50%</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInLeft">
+                    <div class="skill-container">
+                        <div class="skills ux wow slideInLeft">UX Design&ensp;&ensp;&ensp;80%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills pmss wow slideInLeft">Project Management&ensp;&ensp;&ensp;70%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills writing wow slideInLeft">Writing&ensp;&ensp;&ensp;90%</div>
+                    </div>
+
+                    <div class="skill-container">
+                        <div class="skills learning wow slideInLeft">Learning & Adaptability&ensp;&ensp;&ensp;100%</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,13 +159,13 @@
 <section id="portfolio">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center wow slideInLeft">
                 <h2>Portfolio</h2>
                 <hr class="star-primary">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-4 portfolio-item wow slideInLeft">
                 <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -127,7 +175,7 @@
                     <img src="img/portfolio/cavmov.png" class="img-responsive" alt="Cabin">
                 </a>
             </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-4 portfolio-item wow slideInLeft">
                 <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -137,7 +185,7 @@
                     <img src="img/portfolio/Validu.png" class="img-responsive" alt="Slice of cake">
                 </a>
             </div>
-            <div class="col-sm-4 portfolio-item">
+            <div class="col-sm-4 portfolio-item wow slideInLeft">
                 <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                     <div class="caption">
                         <div class="caption-content">
@@ -155,13 +203,13 @@
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center wow slideInLeft">
                     <h2>Contact Me</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2 wow slideInLeft">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <form name="sentMessage" id="contactForm" novalidate>
@@ -226,10 +274,6 @@
                                 <a href="http://linkedin.com/in/matthew-yates-657a84140" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>How was this site made?</h3>
-                        <p>This site was built upon an open source Bootstrap theme, created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
                 </div>
             </div>
@@ -493,6 +537,9 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
+    <!-- Skill Bar Animation -->
+    <script src="js/skillbar.js"></script>
 
 </body>
 
