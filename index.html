@@ -386,9 +386,20 @@
                             <h2>MMORPG - Side Project</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Ex.png" class="img-responsive img-centered" alt="">
-                            <p>This is an ongoing side project of mine, to develop a basic MMORPG game with the styling of an old Nintendo Game. It has been my first involvement with game development beyond basic command line games. It is current in a very bare bones state of development, but anyone is more than welcome to check it out at any point as it is all open source.</p>
+                            <p>This is an ongoing side project of mine, to develop a basic MMORPG game with the styling of an old Nintendo Game. It has been my first involvement with game development beyond basic command line games. It is currently in a very bare bones state of development, but anyone is more than welcome to check it out at any point as it is all open source.</p>
                             <img src="img/portfolio/Ex2.gif" class="img-responsive img-centered" alt="">
                             <img src="img/portfolio/Ex23.gif" class="img-responsive img-centered" alt="">
+                            <h2>UPDATE - 4/11/17</h2>
+                            <p>Finally! I have finished the first portion of this project, one of the most important - the initial framework of an MMO/MMORPG. You are welcome to visit the GitHub repository, linked below, if you wish to use it or try it out.</p>
+                            <img src="img/portfolio/Ex25.gif" class="img-responsive img-centered" alt="">
+                            <p>Essentially, the goal of this portion of the project was to:<br></p>
+                            <ul style="list-style: none;">
+                                <li>Develop a basic server for an online game that handles incoming and outgoing packets, and can update/pull data from a database, for game and user information.</li>
+                                <li>Develop a client that can communicate with the server, and update the game accordingly and fast.</li>
+                                <li>Develop the server and game to be handle multiple active users at once, asynchronously.</li>
+                            </ul>
+                            <p>The game will currently allow users to register an account, which is setup to save/pull credentials through the server to a local MongoDB/Robomongo database. From there, users will be put into the game, where for now you can just walk around and enjoy some of the Pokemon pixel art I scrounged from the internet. Users will have their username displayed above them, which is a given for any online game. When a user logs out, their location will be stored on the server so they can continue where they left off from their previous session.</p>
+                            <p>Unfortunately, that is all the game does in it's current state. Until now, this project has been mainly about developing the server aspect of the game, and the corresponding aspects of the game client which handle server communication for multiple players. However, the project will continue, and up next is to develop the actual game itself - which will take advantage of the server functionalities I have laid out for it.</p>
                             <ul class="list-inline item-details">
                                 <li>Source:
                                     <strong><a href="https://github.com/yatesm4/MMORPG-Collection">MMORPG - GitHub Repository</a>
